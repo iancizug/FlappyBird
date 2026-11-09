@@ -17,9 +17,8 @@ export default class AncizuController {
     scene: {width: 800, height: 600, floor: int (the floor height)}
     dt: milliseconds elapsed since last update */
     
-    if ((birdData.y > scene.height - scene.floor - 10) || (birdData.x < pipes[0]?.x - pipes[0]?.pipeWidth - 5 && pipes[0]?.isTop == false)) {
+    if ((birdData.y > scene.height - scene.floor - 10) || (birdData.x < (pipes[0]?.x - pipes[0]?.pipeWidth - 5) && pipes[0]?.isTop == false && birdData.y < (scene.height - 200))) {
       this.jump(3);
-      //this.jump(pipes[0]?.pipeHeight);
     }
   }
 }
